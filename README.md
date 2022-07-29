@@ -4,7 +4,7 @@ Evapotranspiration is one of the major components of Earth’s water balance, be
 and plant transpiration from the land and ocean surface. 
 
 Ed.py is a Python script that can be used to simulate field-scale evapotranspiration and drainage from 
-the root zone of an area of crop, wetland, or forest. 
+the root zone of an area woth a crop, a wetland, or a forest. 
 
 The conceptual model implemented in ed.py is a modification of the Evacrop model by Olesen and Heidmann (2002), 
 which itself builds on the Watcros model by Aslyng and Hansen (1982). The ed.py conceptualization is based on 
