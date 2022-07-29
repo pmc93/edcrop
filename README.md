@@ -30,4 +30,4 @@ ed.py uses Mualem – van Genuchten like functions. It also simulates gravity dr
 As input, given in text files, ed.py requires daily temperature, precipitation, and reference evapotranspiration. It also 
 requires information about combination(s) of soil type and vegetation type to simulate. One can choose between seven 
 default soil types and fifteen default vegetation types, or one can manually input information for other types of soil 
-or vegetation. In a single model run, ed.py can loop through lists of climate files, soils, and vegetation.  
+or vegetation. In a single model run, ed.py can loop through lists of climate files, soils, and vegetation.
