@@ -3,7 +3,7 @@
 Evapotranspiration is one of the major components of Earth’s water balance, being the sum of evaporation 
 and plant transpiration from the land and ocean surface. 
 
-Edcrop is a Python script that, using climate input, can be used to simulate field-scale evapotranspiration 
+Edcrop is a Python package that, using climate input, simulates field-scale evapotranspiration 
 and drainage from the root zone of an area covered with a crop, a wetland, or a forest. 
 
 The conceptual model implemented in edcrop is a modification of the Evacrop model by Olesen and Heidmann (2002), 
@@ -25,9 +25,12 @@ almost straight copy of the function used in the original Evacrop code by Olesen
 flow through the soil profile as flow through two linear reservoirs using daily time steps. However, it can simulate 
 macro-pore drainage, which the original Evacrop cannot. The second alternative simulates flow through the soil profile 
 as flow through four linear or nonlinear reservoirs using daily or sub-daily time steps. For nonlinear reservoirs, 
-edcrop uses Mualem – van Genuchten like functions. It also simulates gravity driven macro-pore flow as well as surface runoff. 
+edcrop.py uses Mualem – van Genuchten like functions. It also simulates gravity driven macro-pore flow as well as 
+surface runoff. 
 
 As input, given in text files, edcrop requires daily temperature, precipitation, and reference evapotranspiration. It also 
 requires information about combination(s) of soil type and vegetation type to simulate. One can choose between seven 
 default soil types and fifteen default vegetation types, or one can manually input information for other types of soil 
-or vegetation. In a single model run, edcrop can loop through lists of climate files, soils, and vegetation.
+or vegetation. In a single model run, edcrop.py can loop through lists of climate files, soils, and vegetation.
+
+Edcrop can be imported and used in own script, or it can be executed from the command line as a script.
