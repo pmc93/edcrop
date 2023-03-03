@@ -1,7 +1,7 @@
 """
 Created on Fri Nov 27 16:53:52 2015
 
-Finished September 2022.
+Finished March 2023.
 
 @author: Steen Christensen, Geoscience, Aarhus University, Denmark,
          sc@geo.au.dk, or steen@grast.dk.
