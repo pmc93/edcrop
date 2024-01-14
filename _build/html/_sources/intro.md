@@ -1,4 +1,4 @@
-# Welcome to Edcrop Online Documentation
+## Welcome to Edcrop Online Documentation
 
 This report documents a computer program (a python package) developed as an exercise to learn to code
 in python. The author has been coding since the late seventies, first in Algol W and Fortran, later also in C. A
