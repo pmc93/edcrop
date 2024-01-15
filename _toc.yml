@@ -6,6 +6,5 @@ root: home
 chapters:
 - file: introduction
 - file: installation
-- file: notebooks
 - file: markdown-notebooks
 - file: mymarkdownfile
