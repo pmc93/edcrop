@@ -12,13 +12,13 @@ evapotranspiration can be estimated from climatic data by simulating the water b
 specific vegetation growing on a specific soil. This report documents a code (a package), programmed in
 Python and named Edcrop, which can do such local simulations for various types of soil and vegetation. It
 does not simulate surface flow, lateral flow, nor flow processes taking place in the saturated zone (e.g. loss
-of water to drains). The water balance equation of Edcrop is therefore simply
+of water to drains). The water balance equation of Edcrop is therefore simply:
 
-$$ x = {P = E_a + D + ∆V} $$
+$$ {P = E_a + D + ∆V} $$
 
 
-where P is precipitation (possibly including irrigation), Ea is actual evapotranspiration, D is downward
-drainage to the unsaturated zone, and ∆V is change in water storage. Evapotranspiration includes
+where $$P$$ is precipitation (possibly including irrigation), $$E_a$$ is actual evapotranspiration, D is downward
+drainage to the unsaturated zone, and $$∆V$$ is change in water storage. Evapotranspiration includes
 evaporation of snow, evaporation of intercepted water, evaporation of soil water, and plant transpiration.
 ∆V includes change in snow pack, change in intercepted water, and change in water content in the root
 zone and in the subzone. The subzone is the zone between the bottom of the root zone and the bottom of
@@ -76,35 +76,6 @@ compares results obtained by using the alternative water balance functions of Ed
 settings. Appendix B illustrate similarities and differences in simulation results obtained by the simpler
 Edcrop code and the more advanced code named Daisy (Hansen et al., 1990), respectively.
 
-## What is MyST?
-
-MyST stands for "Markedly Structured Text". It
-is a slight variation on a flavor of markdown called "CommonMark" markdown,
-with small syntax extensions to allow you to write **roles** and **directives**
-in the Sphinx ecosystem.
-
-For more about MyST, see [the MyST Markdown Overview](https://jupyterbook.org/content/myst.html).
-
-## Sample Roles and Directives
-
-Roles and directives are two of the most powerful tools in Jupyter Book. They
-are kind of like functions, but written in a markup language. They both
-serve a similar purpose, but **roles are written in one line**, whereas
-**directives span many lines**. They both accept different kinds of inputs,
-and what they do with those inputs depends on the specific role or directive
-that is being called.
-
-Here is a "note" directive:
-
-```{note}
-Here is a note
-```
-
-It will be rendered in a special box when you build your book.
-
-Here is an inline directive to refer to a document: {doc}`markdown-notebooks`.
-
-
 ## Citations
 
 You can also cite references that are stored in a `bibtex` file. For example,
@@ -119,8 +90,3 @@ then the bibliography is inserted with:
 
 ```{bibliography}
 ```
-
-## Learn more
-
-This is just a simple starter to get you started.
-You can learn a lot more at [jupyterbook.org](https://jupyterbook.org).
