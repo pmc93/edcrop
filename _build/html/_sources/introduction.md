@@ -14,6 +14,8 @@ Python and named Edcrop, which can do such local simulations for various types o
 does not simulate surface flow, lateral flow, nor flow processes taking place in the saturated zone (e.g. loss
 of water to drains). The water balance equation of Edcrop is therefore simply
 
+$$ x = {P = E_a + D + ∆V} $$
+
 
 where P is precipitation (possibly including irrigation), Ea is actual evapotranspiration, D is downward
 drainage to the unsaturated zone, and ∆V is change in water storage. Evapotranspiration includes
