@@ -1,4 +1,4 @@
-# Here's my sample title
+# Quick Start
 
 This is some sample text.
 
