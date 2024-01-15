@@ -7,7 +7,7 @@ pandas (v. 1.2.4), matplotlib (v. 3.3.4), and yaml (pyyaml v. 5.4.1).
 Edcrop is available from the Python Package Index (PyPI.org) repository. It is installed by executing from the
 command line
 
-emsp**pip install edcrop**
+emsp **pip install edcrop**
 
 > This installation uses the following dependencies of other Python packages:
 > dependencies = [
