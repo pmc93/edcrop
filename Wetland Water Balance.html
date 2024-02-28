@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Welcome to Edcrop &#8212; Edcrop</title>
+    <title>Wetland Water Balance &#8212; Edcrop</title>
   
   
   
@@ -62,10 +62,9 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Wetland Water Balance';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Introduction" href="markdown.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -149,7 +148,7 @@ const thebe_selector_output = ".output, .cell_output"
 
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="home.html">
   
   
   
@@ -169,17 +168,20 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="home.html">
                     Welcome to Edcrop
                 </a>
             </li>
         </ul>
         <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mymarkdownfile.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation and Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inputs.html">Input Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outputs.html">Output files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tables.html">Tables of input and output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks-collection.html">Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="citations.html">Citations</a></li>
 </ul>
 
     </div>
@@ -251,7 +253,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FWetland Water Balance.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -281,7 +283,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/Wetland Water Balance.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -291,7 +293,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -363,7 +365,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Welcome to Edcrop</h1>
+    <h1>Wetland Water Balance</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -377,19 +379,120 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="welcome-to-edcrop">
-<h1>Welcome to Edcrop<a class="headerlink" href="#welcome-to-edcrop" title="Permalink to this heading">#</a></h1>
-<p>Edcrop is a Python package for simulating evapotranspiration and drainage from a field on the basis of
-climatic data and builds off of the Evacrop program (Olesen and Heidmann, 2002).</p>
-<p>Edcrop is short for “Evapotranspiration and Drainage from CROP, wetland, or forest”.</p>
-<p>Check out the content pages bundled with this sample book to see more.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mymarkdownfile.html">Quick Start</a></li>
-</ul>
+  <section class="tex2jax_ignore mathjax_ignore" id="wetland-water-balance">
+<h1>Wetland Water Balance<a class="headerlink" href="#wetland-water-balance" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from edcrop import edcrop
+import os
+import pandas as pd
+import matplotlib.pyplot as plt
+import warnings
+warnings.simplefilter(action=&#39;ignore&#39;, category=FutureWarning)
+
+wdir = os.path.join(os.getcwd(), &#39;edcrop&#39;)
+
+os.chdir(wdir)
+
+yaml = os.path.join(wdir, &#39;yaml_files/default.yaml&#39;)
+
+edcrop.run_model(yaml=yaml)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Running edcrop version 0.0.6
+
+Read input file C:\Users\au701230\OneDrive - Aarhus Universitet\Documents\Projects\edcrop\edcrop\yaml_files/default.yaml.
+
+Loop through simulations.
+
+ Climate data file: C:\Users\au701230\OneDrive - Aarhus Universitet\Documents\Projects\edcrop\edcrop\data\Weatherdata_S1.edcrop_wf.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Soil parameter values:  use default.
+
+ Crop parameter values:  use default.
+
+ Model parameter values:  update from input file.
+  ed:
+    plotseries: false
+    prlistd: Date T P Ep I Ea Dsum Db Dmp
+    prlisty: P Ep I Ea Dsum Db Dmp
+    wbfunc: ed
+    
+===&gt; Run Station1_JB1_WW_ed
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Model parameter values:  update from input file.
+  Evacrop:
+    plotseries: false
+    prlistd: Date T P Ep I Ea Dsum Db Dmp Ve Vr Vb
+    prlisty: P Ep I Ea Dsum Db Dmp Ve Vr Vb
+    wbfunc: evacrop
+    
+===&gt; Run Station1_JB1_WW_Evacrop
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Soil parameter values:  update from input file.
+  JB7:
+    Cmp: 0.10168858
+    Kmp: 10.0
+    
+
+ Crop parameter values:  use default.
+
+ Model parameter values:  update from input file.
+  ed:
+    plotseries: false
+    prlistd: Date T P Ep I Ea Dsum Db Dmp
+    prlisty: P Ep I Ea Dsum Db Dmp
+    wbfunc: ed
+    
+===&gt; Run Station1_JB7_WW_ed
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Model parameter values:  update from input file.
+  Evacrop:
+    plotseries: false
+    prlistd: Date T P Ep I Ea Dsum Db Dmp Ve Vr Vb
+    prlisty: P Ep I Ea Dsum Db Dmp Ve Vr Vb
+    wbfunc: evacrop
+    
+===&gt; Run Station1_JB7_WW_Evacrop
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
+df = pd.read_csv(&#39;Station1_JB1_WW_ed_wb.out&#39;)
+df.columns = df.columns.str.replace(&#39; &#39;, &#39;&#39;)
+
+df_sub = df.iloc[0:365,:]
+
+
+fig, axs = plt.subplots(3,2, sharex = &#39;col&#39;, sharey=&#39;row&#39;)
+
+df.plot.line(x=&#39;Date&#39;, y=&#39;Ea&#39;, ax=axs[0,0], c=&#39;C2&#39;, label=&#39;Actual ET&#39;, lw=0.5)
+df.plot.line(x=&#39;Date&#39;, y=&#39;P&#39;, ax=axs[1,0], c=&#39;C0&#39;, label=&#39;Precipitation&#39;, lw=0.5)
+df.plot.line(x=&#39;Date&#39;, y=&#39;Dsum&#39;, ax=axs[2,0], c=&#39;C4&#39;, label=&#39;Drainage&#39;, lw=0.5)
+
+
+df_sub.plot.line(x=&#39;Date&#39;, y=&#39;Ea&#39;, ax=axs[0,1], c=&#39;C2&#39;, label=&#39;Actual ET&#39;, lw=0.5)
+df_sub.plot.line(x=&#39;Date&#39;, y=&#39;P&#39;, ax=axs[1,1], c=&#39;C0&#39;, label=&#39;Precipitation&#39;, lw=0.5)
+df_sub.plot.line(x=&#39;Date&#39;, y=&#39;Dsum&#39;, ax=axs[2,1], c=&#39;C4&#39;, label=&#39;Drainage&#39;, lw=0.5)
+
+axs[0,0].set_ylabel(&#39;Drainage [mm]&#39;)
+
+fig.autofmt_xdate()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/050b9f0dca9afc96646401de9275de7f0cfe548d2a272972cbe38d4dc063daed.png" src="_images/050b9f0dca9afc96646401de9275de7f0cfe548d2a272972cbe38d4dc063daed.png" />
+</div>
 </div>
 </section>
 
@@ -423,15 +526,6 @@ climatic data and builds off of the Evacrop program (Olesen and Heidmann, 2002).
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
-    <a class="right-next"
-       href="markdown.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Introduction</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -450,20 +544,13 @@ climatic data and builds off of the Evacrop program (Olesen and Heidmann, 2002).
   <div class="footer-item">
     
 <p class="component-author">
-By Steen Christiansen and Paul McLachlan
+By S. Christensen & P. McLachlan
 </p>
 
   </div>
   
   <div class="footer-item">
     
-
-  <p class="copyright">
-    
-      © Copyright 2022.
-      <br/>
-    
-  </p>
 
   </div>
   

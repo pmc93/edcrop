@@ -181,9 +181,11 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation and Quickstart</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mymarkdownfile.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inputs.html">Input Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outputs.html">Output files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tables.html">Tables of input and output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks-collection.html">Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="citations.html">Citations</a></li>
 </ul>
 
     </div>
@@ -356,9 +358,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -374,14 +374,6 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citations">Citations</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -391,7 +383,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="introduction">
+  <section id="introduction">
 <h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h1>
 <p>Evapotranspiration is one of the major components of Earth’s water balance, being the sum of evaporation
 and plant transpiration from the land and ocean surface. Factors that affect evapotranspiration includes
@@ -407,10 +399,10 @@ does not simulate surface flow, lateral flow, nor flow processes taking place in
 of water to drains). The water balance equation of Edcrop is therefore simply:</p>
 <div class="math notranslate nohighlight">
 \[ {P = E_a + D + ∆V} \]</div>
-<p>where $<span class="math notranslate nohighlight">\(P\)</span><span class="math notranslate nohighlight">\( is precipitation (possibly including irrigation), \)</span><span class="math notranslate nohighlight">\(E_a\)</span><span class="math notranslate nohighlight">\( is actual evapotranspiration, D is downward
-drainage to the unsaturated zone, and \)</span><span class="math notranslate nohighlight">\(∆V\)</span>$ is change in water storage. Evapotranspiration includes
+<p>where <span class="math notranslate nohighlight">\( P \)</span> is precipitation (possibly including irrigation), <span class="math notranslate nohighlight">\(E_a\)</span> is actual evapotranspiration, D is downward
+drainage to the unsaturated zone, and <span class="math notranslate nohighlight">\(∆V\)</span> is change in water storage. Evapotranspiration includes
 evaporation of snow, evaporation of intercepted water, evaporation of soil water, and plant transpiration.
-∆V includes change in snow pack, change in intercepted water, and change in water content in the root
+<span class="math notranslate nohighlight">\(∆V\)</span> includes change in snow pack, change in intercepted water, and change in water content in the root
 zone and in the subzone. The subzone is the zone between the bottom of the root zone and the bottom of
 the model’s soil profile.</p>
 <p>The conceptual model implemented in Edcrop is a modification of the Evacrop model by Olesen and
@@ -431,14 +423,15 @@ or (ii) they are determined automatically by Edcrop using certain criteria.</p>
 an almost straight copy of the function used in the original Evacrop code by Olesen and Heidmann (2002),
 simulating flow through the soil profile as flow through two linear reservoirs using daily time steps.
 However, it can simulate macro-pore drainage, which the original Evacrop cannot. The second alternative
-simulates flow through the soil profile as flow through four linear or nonlinear reservoirs using daily or subdaily time steps. For nonlinear reservoirs, Edcrop uses Mualem – van Genuchten like functions. It also
+simulates flow through the soil profile as flow through four linear or nonlinear reservoirs using daily or
+subdaily time steps. For nonlinear reservoirs, Edcrop uses Mualem – van Genuchten like functions. It also
 simulates gravity driven macro-pore flow as well as surface runoff.</p>
 <p>As input, given in text files, Edcrop requires daily temperature, precipitation, and reference
 evapotranspiration. It also requires information about combination(s) of soil type and vegetation type to
 simulate. One can choose between seven default soil types and fifteen default vegetation types, or one can
 manually input information for other types of soil or vegetation. In a single model run, Edcrop can loop
-through lists of climate files, soils, and vegetation.
-The seven default soil types vary from coarse sandy soil to clayey soil. The fifteen default vegetation types
+through lists of climate files, soils, and vegetation.</p>
+<p>The seven default soil types vary from coarse sandy soil to clayey soil. The fifteen default vegetation types
 include bare soil, ten types of crop, two types of forest, and two types of wetland.
 As said, the water balance simulation of Edcrop is similar to that of Evacrop (Olesen and Heidmann, 2002),
 but in other ways Edcrop is different from Evacrop. Edcrop allows more flexible and easier specification of
@@ -453,31 +446,6 @@ simulation of groundwater flow using Modflow (McDonald and Harbaugh, 1988), drai
 be used as recharge input for the Modflow RCH package, while the difference between Edcrop’s potential
 evapotranspiration and actual evapotranspiration can be used as maximum ET input for the Modflow EVT
 package. Similar can be done using newer versions of Modflow.</p>
-<p>In the following, Chapter 2 instructs how to install and run Edcrop. Chapter 3 gives details about the
-Evacrop conceptual model and the equations used for this by Edcrop. Chapter 4 gives details about the
-alternative soil water balance model of Edcrop. Chapter 5 supplemented by the Tables of Chapter 7 give
-the input instructions. Chapter 6 explains the output files. Chapter 8 gives the list of references. Appendix A
-compares results obtained by using the alternative water balance functions of Edcrop with alternative
-settings. Appendix B illustrate similarities and differences in simulation results obtained by the simpler
-Edcrop code and the more advanced code named Daisy (Hansen et al., 1990), respectively.</p>
-<section id="citations">
-<h2>Citations<a class="headerlink" href="#citations" title="Permalink to this heading">#</a></h2>
-<p>You can also cite references that are stored in a <code class="docutils literal notranslate"><span class="pre">bibtex</span></code> file. For example,
-the following syntax: <code class="docutils literal notranslate"><span class="pre">{cite}`holdgraf_evidence_2014`</span></code> will render like
-this: <span id="id1">[<a class="reference internal" href="#id3" title="Christopher Ramsay Holdgraf, Wendy de Heer, Brian N. Pasley, and Robert T. Knight. Evidence for Predictive Coding in Human Auditory Cortex. In International Conference on Cognitive Neuroscience. Brisbane, Australia, Australia, 2014. Frontiers in Neuroscience.">HdHPK14</a>]</span>.</p>
-<p>Moreover, you can insert a bibliography into your page with this syntax:
-The <code class="docutils literal notranslate"><span class="pre">{bibliography}</span></code> directive must be used for all the <code class="docutils literal notranslate"><span class="pre">{cite}</span></code> roles to
-render properly.
-For example, if the references for your book are stored in <code class="docutils literal notranslate"><span class="pre">references.bib</span></code>,
-then the bibliography is inserted with:</p>
-<div class="docutils container" id="id2">
-<dl class="citation">
-<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">HdHPK14</a></span></dt>
-<dd><p>Christopher Ramsay Holdgraf, Wendy de Heer, Brian N. Pasley, and Robert T. Knight. Evidence for Predictive Coding in Human Auditory Cortex. In <em>International Conference on Cognitive Neuroscience</em>. Brisbane, Australia, Australia, 2014. Frontiers in Neuroscience.</p>
-</dd>
-</dl>
-</div>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -535,20 +503,7 @@ then the bibliography is inserted with:</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citations">Citations</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
+                <div class="bd-sidebar-secondary bd-toc"></div>
               
             
           </div>
@@ -559,20 +514,13 @@ then the bibliography is inserted with:</p>
   <div class="footer-item">
     
 <p class="component-author">
-By Steen Christiansen and Paul McLachlan
+By S. Christensen & P. McLachlan
 </p>
 
   </div>
   
   <div class="footer-item">
     
-
-  <p class="copyright">
-    
-      © Copyright 2022.
-      <br/>
-    
-  </p>
 
   </div>
   

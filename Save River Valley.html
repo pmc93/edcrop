@@ -7,7 +7,9 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Search - Edcrop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Save River Valley &#8212; Edcrop</title>
   
   
   
@@ -60,12 +62,9 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'search';</script>
-  <script src="_static/searchtools.js"></script>
-  <script src="_static/language_data.js"></script>
-  <script src="searchindex.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Save River Valley';</script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" />
+    <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -102,7 +101,7 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="search-button__overlay"></div>
     <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
-      action="#"
+      action="search.html"
       method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
   <input type="search"
@@ -254,7 +253,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fsearch.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FSave River Valley.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -266,6 +265,54 @@ const thebe_selector_output = ".output, .cell_output"
   </span>
 <span class="btn__text-container">Open issue</span>
 </a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Save River Valley.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
 </li>
       
   </ul>
@@ -316,42 +363,161 @@ document.write(`
 </div>
               
               
-  <div class="bd-search-container">
-    <h1>Search</h1>
-    <noscript>
-      <div class="admonition error">
-        <p class="admonition-title">Error</p>
-        <p>Please activate JavaScript to enable the search functionality.</p>
-      </div>
-    </noscript>
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Save River Valley</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="save-river-valley">
+<h1>Save River Valley<a class="headerlink" href="#save-river-valley" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from edcrop import edcrop
+import os
+import pandas as pd
+import matplotlib.pyplot as plt
+import warnings
+warnings.simplefilter(action=&#39;ignore&#39;, category=FutureWarning)
+
+wdir = os.path.join(os.getcwd(), &#39;edcrop&#39;)
+
+os.chdir(wdir)
+
+yaml = os.path.join(wdir, &#39;yaml_files/default.yaml&#39;)
+
+edcrop.run_model(yaml=yaml)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Running edcrop version 0.0.6
+
+Read input file C:\Users\au701230\OneDrive - Aarhus Universitet\Documents\Projects\edcrop\edcrop\yaml_files/default.yaml.
+
+Loop through simulations.
+
+ Climate data file: C:\Users\au701230\OneDrive - Aarhus Universitet\Documents\Projects\edcrop\edcrop\data\Weatherdata_S1.edcrop_wf.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Soil parameter values:  use default.
+
+ Crop parameter values:  use default.
+
+ Model parameter values:  update from input file.
+  ed:
+    plotseries: false
+    prlistd: Date T P Ep I Ea Dsum Db Dmp
+    prlisty: P Ep I Ea Dsum Db Dmp
+    wbfunc: ed
     
-<form class="bd-search d-flex align-items-center"
-      action="#"
-      method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         id="search-input"
-         placeholder="Search this book..."
-         aria-label="Search this book..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-    <div id="search-results"></div>
-  </div>
-  <script>
-    // Activate the search field on page load
-    let searchInput = document.querySelector("form.bd-search input");
-    if (searchInput) {
-        searchInput.focus();
-        searchInput.select();
-        console.log("[PST]: Set focus on search field.");
+===&gt; Run Station1_JB1_WW_ed
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Model parameter values:  update from input file.
+  Evacrop:
+    plotseries: false
+    prlistd: Date T P Ep I Ea Dsum Db Dmp Ve Vr Vb
+    prlisty: P Ep I Ea Dsum Db Dmp Ve Vr Vb
+    wbfunc: evacrop
+    
+===&gt; Run Station1_JB1_WW_Evacrop
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Soil parameter values:  update from input file.
+  JB7:
+    Cmp: 0.10168858
+    Kmp: 10.0
+    
+
+ Crop parameter values:  use default.
+
+ Model parameter values:  update from input file.
+  ed:
+    plotseries: false
+    prlistd: Date T P Ep I Ea Dsum Db Dmp
+    prlisty: P Ep I Ea Dsum Db Dmp
+    wbfunc: ed
+    
+===&gt; Run Station1_JB7_WW_ed
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Model parameter values:  update from input file.
+  Evacrop:
+    plotseries: false
+    prlistd: Date T P Ep I Ea Dsum Db Dmp Ve Vr Vb
+    prlisty: P Ep I Ea Dsum Db Dmp Ve Vr Vb
+    wbfunc: evacrop
+    
+===&gt; Run Station1_JB7_WW_Evacrop
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
+df = pd.read_csv(&#39;Station1_JB1_WW_ed_wb.out&#39;)
+df.columns = df.columns.str.replace(&#39; &#39;, &#39;&#39;)
+
+df_sub = df.iloc[0:365,:]
+
+
+fig, axs = plt.subplots(3,2, sharex = &#39;col&#39;, sharey=&#39;row&#39;)
+
+df.plot.line(x=&#39;Date&#39;, y=&#39;Ea&#39;, ax=axs[0,0], c=&#39;C2&#39;, label=&#39;Actual ET&#39;, lw=0.5)
+df.plot.line(x=&#39;Date&#39;, y=&#39;P&#39;, ax=axs[1,0], c=&#39;C0&#39;, label=&#39;Precipitation&#39;, lw=0.5)
+df.plot.line(x=&#39;Date&#39;, y=&#39;Dsum&#39;, ax=axs[2,0], c=&#39;C4&#39;, label=&#39;Drainage&#39;, lw=0.5)
+
+
+df_sub.plot.line(x=&#39;Date&#39;, y=&#39;Ea&#39;, ax=axs[0,1], c=&#39;C2&#39;, label=&#39;Actual ET&#39;, lw=0.5)
+df_sub.plot.line(x=&#39;Date&#39;, y=&#39;P&#39;, ax=axs[1,1], c=&#39;C0&#39;, label=&#39;Precipitation&#39;, lw=0.5)
+df_sub.plot.line(x=&#39;Date&#39;, y=&#39;Dsum&#39;, ax=axs[2,1], c=&#39;C4&#39;, label=&#39;Drainage&#39;, lw=0.5)
+
+axs[0,0].set_ylabel(&#39;Drainage [mm]&#39;)
+
+fig.autofmt_xdate()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/050b9f0dca9afc96646401de9275de7f0cfe548d2a272972cbe38d4dc063daed.png" src="_images/050b9f0dca9afc96646401de9275de7f0cfe548d2a272972cbe38d4dc063daed.png" />
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
     }
-  </script>
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
 
               
               
