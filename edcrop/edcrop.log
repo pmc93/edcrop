@@ -1,0 +1,19 @@
+
+Read input file C:\Users\au701230\OneDrive - Aarhus Universitet\Documents\Projects\edcrop\edcrop\yaml_files/wetland.yaml.
+
+Loop through simulations.
+
+ Climate data file: C:\Users\au701230\OneDrive - Aarhus Universitet\Documents\Projects\edcrop\edcrop\data\Wetland.edcrop_wf.
+
+ Soil parameter values:  use default.
+
+ Crop parameter values:  use default.
+
+ Model parameter values:  update from input file.
+  ed:
+    plotseries: false
+    prlistd: Date T P Ep I Ea Dsum Db Dmp
+    prlisty: P Ep I Ea Dsum Db Dmp
+    wbfunc: ed
+    
+===> Run Station1_JB2_WL_ed
