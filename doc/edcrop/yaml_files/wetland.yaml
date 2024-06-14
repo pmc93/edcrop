@@ -1,0 +1,23 @@
+Soils:
+ JB2:
+
+
+Crops:
+ WL:
+
+Climates:
+ Station1:
+  filename: C:\Users\au701230\OneDrive - Aarhus Universitet\Documents\Projects\edcrop\edcrop\data\Wetland.edcrop_wf
+
+Models:
+ ed:
+   wbfunc: 'ed'
+   prlistd:  Date T P Ep I Ea Dsum Db Dmp
+   prlisty:  P Ep I Ea Dsum Db Dmp
+   plotseries: False
+
+ #Evacrop:
+ #  wbfunc: 'evacrop'
+ #  plotseries: False
+ #  prlistd:  Date T P Ep I Ea Dsum Db Dmp Ve Vr Vb
+ #  prlisty:  P Ep I Ea Dsum Db Dmp Ve Vr Vb

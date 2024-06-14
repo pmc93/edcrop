@@ -1,0 +1,17 @@
+Soils:
+ JB1:
+
+
+Crops:
+ G1:
+
+Climates:
+ Station1:
+  filename: C:\Users\au701230\OneDrive - Aarhus Universitet\Documents\Projects\edcrop\edcrop\data\Vineyard.edcrop_wf
+
+Models:
+ ed:
+   wbfunc: 'ed'
+   prlistd:  Date T P Ep I Ea Dsum Db Dmp
+   prlisty:  P Ep I Ea Dsum Db Dmp
+   plotseries: False
