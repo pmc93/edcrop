@@ -4,6 +4,7 @@
 title: Edcrop
 author: S. Christensen & P. McLachlan
 logo: logo.png
+theme: jekyll-theme-minimal
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
